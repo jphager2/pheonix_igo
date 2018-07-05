@@ -16,8 +16,9 @@ defmodule PheonixIgoWeb.Router do
   scope "/", PheonixIgoWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    # get "/", PageController, :index
 
+    get "/", PlayerController, :index
     get "/players", PlayerController, :index
   end
 
