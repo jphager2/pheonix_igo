@@ -51,8 +51,5 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :pheonix_igo, PheonixIgo.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
   database: "pheonix_igo_dev",
-  hostname: "localhost",
   pool_size: 10
