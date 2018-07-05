@@ -20,7 +20,7 @@
             <td><%= player.name %></td>
             <td><%= player.rank %></td>
             <td><%= player.inserted_at %></td>
-            <td><a href="/players/<%= player.id %>/games">Games</a></td>
+            <td><a href="/players/<%= player.id %>/games"><%= gettext "ecto.repo.players.games" %></a></td>
           </tr>
         <% end %>
       </tbody>

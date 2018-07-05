@@ -1,0 +1,47 @@
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2\n"
+
+#, elixir-format
+#: lib/phoenix_igo_web/templates/page/index.html.eex:2
+msgid "Welcome to %{name}!"
+msgstr ""
+
+#, elixir-format
+#: lib/phoenix_igo_web/templates/player/index.html.eex:14
+msgid "ecto.repo.players.games"
+msgstr "Games"
+
+#, elixir-format
+#: lib/phoenix_igo_web/templates/player/index.html.eex:13
+msgid "ecto.repo.players.inserted_at"
+msgstr "Since"
+
+#, elixir-format
+#: lib/phoenix_igo_web/templates/player/index.html.eex:11
+msgid "ecto.repo.players.name"
+msgstr "Player"
+
+#, elixir-format
+#: lib/phoenix_igo_web/templates/player/index.html.eex:12
+msgid "ecto.repo.players.rank"
+msgstr "Rank"
+
+#, elixir-format
+#: lib/phoenix_igo_web/templates/player/index.html.eex:3
+msgid "page.players.intro"
+msgstr "Welcome to the players page!"
+
+#, elixir-format
+#: lib/phoenix_igo_web/templates/player/index.html.eex:2
+msgid "page.players.title"
+msgstr "Players"

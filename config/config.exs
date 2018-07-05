@@ -17,6 +17,8 @@ config :phoenix_igo, PhoenixIgoWeb.Endpoint,
   pubsub: [name: PhoenixIgo.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :phoenix_igo, DemoWeb.Gettext, default_locale: "en", locales: ~w(en cs)
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
