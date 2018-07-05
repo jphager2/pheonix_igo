@@ -1,8 +1,8 @@
-defmodule PheonixIgoWeb.UserSocket do
+defmodule PhoenixIgoWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", PheonixIgoWeb.RoomChannel
+  # channel "room:*", PhoenixIgoWeb.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket, timeout: 45_000
@@ -30,7 +30,7 @@ defmodule PheonixIgoWeb.UserSocket do
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
   #
-  #     PheonixIgoWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
+  #     PhoenixIgoWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
   def id(_socket), do: nil

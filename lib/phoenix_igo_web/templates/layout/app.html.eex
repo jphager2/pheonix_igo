@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PheonixIgo</title>
+    <title>PhoenixIgo</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -16,10 +16,10 @@
       <header class="header">
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
-            <li><a href="https://github.com/jphager2/pheonix_igo">Source Code</a></li>
+            <li><a href="https://github.com/jphager2/phoenix_igo">Source Code</a></li>
           </ul>
         </nav>
-        <h1>PheonixIgo</h1>
+        <h1>PhoenixIgo</h1>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

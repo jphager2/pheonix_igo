@@ -1,4 +1,4 @@
-defmodule PheonixIgo.Player do
+defmodule PhoenixIgo.Player do
   use Ecto.Schema
   import Ecto.Changeset
 

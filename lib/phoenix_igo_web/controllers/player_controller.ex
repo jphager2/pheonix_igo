@@ -1,7 +1,7 @@
-alias PheonixIgo.{Repo, Player}
+alias PhoenixIgo.{Repo, Player}
 
-defmodule PheonixIgoWeb.PlayerController do
-  use PheonixIgoWeb, :controller
+defmodule PhoenixIgoWeb.PlayerController do
+  use PhoenixIgoWeb, :controller
 
   def index(conn, _params) do
     players = Repo.all(Player)

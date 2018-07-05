@@ -1,6 +1,6 @@
-defmodule PheonixIgo do
+defmodule PhoenixIgo do
   @moduledoc """
-  PheonixIgo keeps the contexts that define your domain
+  PhoenixIgo keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

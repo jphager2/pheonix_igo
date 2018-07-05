@@ -1,5 +1,5 @@
-defmodule PheonixIgoWeb.ErrorView do
-  use PheonixIgoWeb, :view
+defmodule PhoenixIgoWeb.ErrorView do
+  use PhoenixIgoWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

@@ -1,5 +1,5 @@
-defmodule PheonixIgoWeb.Router do
-  use PheonixIgoWeb, :router
+defmodule PhoenixIgoWeb.Router do
+  use PhoenixIgoWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,7 +13,7 @@ defmodule PheonixIgoWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", PheonixIgoWeb do
+  scope "/", PhoenixIgoWeb do
     pipe_through :browser # Use the default browser stack
 
     # get "/", PageController, :index
@@ -23,7 +23,7 @@ defmodule PheonixIgoWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PheonixIgoWeb do
+  # scope "/api", PhoenixIgoWeb do
   #   pipe_through :api
   # end
 end

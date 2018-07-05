@@ -1,4 +1,4 @@
-defmodule PheonixIgo.Application do
+defmodule PhoenixIgo.Application do
   use Application
 
   # See https://hexdocs.pm/elixir/Application.html
@@ -9,23 +9,23 @@ defmodule PheonixIgo.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(PheonixIgo.Repo, []),
+      supervisor(PhoenixIgo.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(PheonixIgoWeb.Endpoint, []),
-      # Start your own worker by calling: PheonixIgo.Worker.start_link(arg1, arg2, arg3)
-      # worker(PheonixIgo.Worker, [arg1, arg2, arg3]),
+      supervisor(PhoenixIgoWeb.Endpoint, []),
+      # Start your own worker by calling: PhoenixIgo.Worker.start_link(arg1, arg2, arg3)
+      # worker(PhoenixIgo.Worker, [arg1, arg2, arg3]),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: PheonixIgo.Supervisor]
+    opts = [strategy: :one_for_one, name: PhoenixIgo.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    PheonixIgoWeb.Endpoint.config_change(changed, removed)
+    PhoenixIgoWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

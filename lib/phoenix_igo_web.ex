@@ -1,12 +1,12 @@
-defmodule PheonixIgoWeb do
+defmodule PhoenixIgoWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use PheonixIgoWeb, :controller
-      use PheonixIgoWeb, :view
+      use PhoenixIgoWeb, :controller
+      use PhoenixIgoWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,17 +19,17 @@ defmodule PheonixIgoWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: PheonixIgoWeb
+      use Phoenix.Controller, namespace: PhoenixIgoWeb
       import Plug.Conn
-      import PheonixIgoWeb.Router.Helpers
-      import PheonixIgoWeb.Gettext
+      import PhoenixIgoWeb.Router.Helpers
+      import PhoenixIgoWeb.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/pheonix_igo_web/templates",
-                        namespace: PheonixIgoWeb
+      use Phoenix.View, root: "lib/phoenix_igo_web/templates",
+                        namespace: PhoenixIgoWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
@@ -37,9 +37,9 @@ defmodule PheonixIgoWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import PheonixIgoWeb.Router.Helpers
-      import PheonixIgoWeb.ErrorHelpers
-      import PheonixIgoWeb.Gettext
+      import PhoenixIgoWeb.Router.Helpers
+      import PhoenixIgoWeb.ErrorHelpers
+      import PhoenixIgoWeb.Gettext
     end
   end
 
@@ -54,7 +54,7 @@ defmodule PheonixIgoWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import PheonixIgoWeb.Gettext
+      import PhoenixIgoWeb.Gettext
     end
   end
 

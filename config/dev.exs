@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :pheonix_igo, PheonixIgoWeb.Endpoint,
+config :phoenix_igo, PhoenixIgoWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -31,13 +31,13 @@ config :pheonix_igo, PheonixIgoWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :pheonix_igo, PheonixIgoWeb.Endpoint,
+config :phoenix_igo, PhoenixIgoWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/pheonix_igo_web/views/.*(ex)$},
-      ~r{lib/pheonix_igo_web/templates/.*(eex)$}
+      ~r{lib/phoenix_igo_web/views/.*(ex)$},
+      ~r{lib/phoenix_igo_web/templates/.*(eex)$}
     ]
   ]
 
@@ -49,7 +49,7 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :pheonix_igo, PheonixIgo.Repo,
+config :phoenix_igo, PhoenixIgo.Repo,
   adapter: Ecto.Adapters.Postgres,
-  database: "pheonix_igo_dev",
+  database: "phoenix_igo_dev",
   pool_size: 10

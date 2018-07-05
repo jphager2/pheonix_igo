@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :pheonix_igo,
-  ecto_repos: [PheonixIgo.Repo]
+config :phoenix_igo,
+  ecto_repos: [PhoenixIgo.Repo]
 
 # Configures the endpoint
-config :pheonix_igo, PheonixIgoWeb.Endpoint,
+config :phoenix_igo, PhoenixIgoWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "IluSJXP8zRq5N9kPSwmYQi0PGRGY8c+hD//2ordQ1jWU3XvB5x46LSsp3xLseQnO",
-  render_errors: [view: PheonixIgoWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: PheonixIgo.PubSub,
+  render_errors: [view: PhoenixIgoWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: PhoenixIgo.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

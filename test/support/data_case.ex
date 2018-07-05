@@ -1,4 +1,4 @@
-defmodule PheonixIgo.DataCase do
+defmodule PhoenixIgo.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule PheonixIgo.DataCase do
 
   using do
     quote do
-      alias PheonixIgo.Repo
+      alias PhoenixIgo.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import PheonixIgo.DataCase
+      import PhoenixIgo.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PheonixIgo.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixIgo.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(PheonixIgo.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixIgo.Repo, {:shared, self()})
     end
 
     :ok

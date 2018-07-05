@@ -1,5 +1,5 @@
-defmodule PheonixIgoWeb.PageControllerTest do
-  use PheonixIgoWeb.ConnCase
+defmodule PhoenixIgoWeb.PageControllerTest do
+  use PhoenixIgoWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

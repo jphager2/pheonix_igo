@@ -1,14 +1,14 @@
-defmodule PheonixIgoWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :pheonix_igo
+defmodule PhoenixIgoWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :phoenix_igo
 
-  socket "/socket", PheonixIgoWeb.UserSocket
+  socket "/socket", PhoenixIgoWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :pheonix_igo, gzip: false,
+    at: "/", from: :phoenix_igo, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -34,10 +34,10 @@ defmodule PheonixIgoWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_pheonix_igo_key",
+    key: "_phoenix_igo_key",
     signing_salt: "aYEs1j42"
 
-  plug PheonixIgoWeb.Router
+  plug PhoenixIgoWeb.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

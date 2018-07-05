@@ -1,9 +1,9 @@
-defmodule PheonixIgo.Mixfile do
+defmodule PhoenixIgo.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :pheonix_igo,
+      app: :phoenix_igo,
       version: "0.0.1",
       elixir: "~> 1.4",
       elixirc_paths: elixirc_paths(Mix.env),
@@ -19,7 +19,7 @@ defmodule PheonixIgo.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {PheonixIgo.Application, []},
+      mod: {PhoenixIgo.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

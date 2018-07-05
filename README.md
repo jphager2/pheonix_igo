@@ -1,4 +1,4 @@
-# PheonixIgo
+# PhoenixIgo
 
 To start your Phoenix server:
 
