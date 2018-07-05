@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <h2><%= gettext "page.players.title" %></h2>
+  <p class="lead"><%= gettext "page.players.intro" %></p>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table striped">
+      <thead>
+        <tr>
+          <th><%= gettext "ecto.repo.players.name" %></th>
+          <th><%= gettext "ecto.repo.players.rank" %></th>
+          <th><%= gettext "ecto.repo.players.created_at" %></th>
+          <th><%= gettext "ecto.repo.players.games" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for player <- @players do %>
+          <tr>
+            <td><%= player[:name] %></td>
+            <td><%= player[:rank] %></td>
+            <td><%= player[:created_at] %></td>
+            <td><a href="/players/<%= player[:id] %>/games">Games</a></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
