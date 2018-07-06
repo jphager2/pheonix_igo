@@ -12,12 +12,8 @@ msgstr ""
 "Plural-Forms: nplurals=3\n"
 
 #, elixir-format
-#: lib/phoenix_igo_web/templates/page/index.html.eex:2
-msgid "Welcome to %{name}!"
-msgstr ""
-
-#, elixir-format
 #: lib/phoenix_igo_web/templates/player/index.html.eex:14
+#: lib/phoenix_igo_web/templates/player/index.html.eex:23
 msgid "ecto.repo.players.games"
 msgstr "Games"
 
@@ -45,3 +41,13 @@ msgstr "Welcome to the players page!"
 #: lib/phoenix_igo_web/templates/player/index.html.eex:2
 msgid "page.players.title"
 msgstr "Players"
+
+#, elixir-format
+#: lib/phoenix_igo_web/templates/page/index.html.eex:3
+msgid "pages.index.intro"
+msgstr ""
+
+#, elixir-format
+#: lib/phoenix_igo_web/templates/page/index.html.eex:2
+msgid "pages.index.title"
+msgstr ""
