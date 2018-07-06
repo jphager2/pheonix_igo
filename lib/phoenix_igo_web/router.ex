@@ -19,6 +19,8 @@ defmodule PhoenixIgoWeb.Router do
     get "/", PageController, :index
 
     get "/players", PlayerController, :index
+
+    get "/games/:id", GameController, :show
   end
 
   # Other scopes may use custom stacks.

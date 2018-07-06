@@ -1,4 +1,5 @@
 alias Igo.GoKifu
+
 defmodule PhoenixIgoWeb.PageController do
   use PhoenixIgoWeb, :controller
 

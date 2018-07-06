@@ -1,0 +1,9 @@
+<div class="board" data-size="<%= board_size(@game) %>">
+  <%= for {row, i} <- Enum.with_index(board_rows(@game)) do %>
+    <div data-row="<%= i %>">
+      <%= for {col, j} <- Enum.with_index(row) do %>
+        <div class="<%= stone_color_class(col) %>" data-col="<%= j %>"></div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
