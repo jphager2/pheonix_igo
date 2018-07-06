@@ -3,6 +3,10 @@ alias Igo.{Game, Board}
 defmodule PhoenixIgoWeb.GameView do
   use PhoenixIgoWeb, :view
 
+  def game_turn(game) do
+    Igo.Game.turn(game)
+  end
+
   def board_size(game) do
     round(:math.sqrt(length(game.board)))
   end
@@ -22,5 +26,9 @@ defmodule PhoenixIgoWeb.GameView do
       true ->
         "liberty"
     end
+  end
+
+  def star?(game, row, col) do
+    Board.star?(board_size(game), { row, col })
   end
 end
