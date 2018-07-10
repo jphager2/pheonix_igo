@@ -3,7 +3,7 @@ defmodule PhoenixIgo.Repo.Migrations.CreateGames do
 
   def change do
     create table(:games) do
-      add :data, :text
+      add :data, :map
       add :result, :string
 
       timestamps()

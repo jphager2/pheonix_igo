@@ -6,7 +6,11 @@
           <%= if star?(@game, i, j) do %>
             <div class="star"></div>
           <% end %>
-          <div class="<%= stone_color_class(col) %>"></div>
+          <%= form_for @conn, "/games/#{@meta.id}/play", [as: :play], fn(f) -> %>
+            <%= hidden_input f, :y, value: i %>
+            <%= hidden_input f, :x, value: j %>
+            <div class="<%= stone_color_class(col) %>" data-submit=""></div>
+          <% end %>
         </div>
       <% end %>
     </div>

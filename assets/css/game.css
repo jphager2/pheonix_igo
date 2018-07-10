@@ -71,8 +71,8 @@
   background-color: black;
 }
 
-.board > .board-row > .board-col > .stone, 
-.board > .board-row > .board-col > .liberty {
+.board > .board-row > .board-col .stone, 
+.board > .board-row > .board-col .liberty {
   height: calc(var(--base-width) - 2px);
   width: calc(var(--base-width) - 2px);
   border: 2px solid black;
@@ -83,21 +83,21 @@
   cursor: pointer;
 }
 
-.board > .board-row > .board-col > .liberty {
+.board > .board-row > .board-col .liberty {
   border-color: transparent;
   background-color: transparent;
 }
 
-.board > .board-row > .board-col > .liberty:hover {
+.board > .board-row > .board-col .liberty:hover {
   border-color: black;
   background-color: var(--turn-color);
   opacity: 0.3;
 }
 
-.board > .board-row > .board-col > .stone.white {
+.board > .board-row > .board-col .stone.white {
   background-color: var(--color-white);
 }
 
-.board > .board-row > .board-col > .stone.black {
+.board > .board-row > .board-col .stone.black {
   background-color: var(--color-black);
 }

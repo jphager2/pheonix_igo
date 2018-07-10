@@ -16,17 +16,16 @@ defmodule PhoenixIgoWeb.GameController do
     end
   end
 
-  def play(conn, %{"id" => id,  "y" => y, "x" => x}) do
+  def play(conn, %{"id" => id,  "play" => %{"y" => y, "x" => x}}) do
     game = Repo.get(Game, id)
 
     if game do
-      {status, game} = Game.play!(game, {String.to_integer(y), String.to_integer(x)})
+      {status, _game} = Game.play!(game, {String.to_integer(y), String.to_integer(x)})
 
       conn
-      |> assign(:meta, game)
-      |> assign(:game, Game.to_igo(game))
-      |> assign(:status, status)
-      |> render("show.html")
+      |> put_flash(:notice, status)
+      |> redirect(to: "/games/#{game.id}")
+      |> halt()
     else
       conn |> redirect(to: "/") |> halt()
     end
