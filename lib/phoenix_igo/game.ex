@@ -12,17 +12,6 @@ defmodule PhoenixIgo.Game do
     timestamps()
   end
 
-  def play!(game, coord) do
-    igame = to_igo(game)
-    color = Igo.Game.turn(igame)
-    igame = Igo.Game.play(igame, color, coord)
-    data = serialize_data(igame)
-    # TODO: Add handleing of rules (play! probably shouldn't be in this
-    # module.
-    changeset = Ecto.Changeset.cast(game, %{"data" => data}, [:data])
-    Repo.update(changeset)
-  end
-
   def deserialize_player(player) do
     %{
       captures: player["captures"],

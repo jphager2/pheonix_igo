@@ -1,4 +1,4 @@
-alias PhoenixIgo.{Repo, Game}
+alias PhoenixIgo.{Repo, Game, Igo}
 
 defmodule PhoenixIgoWeb.GameController do
   use PhoenixIgoWeb, :controller
@@ -18,12 +18,18 @@ defmodule PhoenixIgoWeb.GameController do
 
   def play(conn, %{"id" => id,  "play" => %{"y" => y, "x" => x}}) do
     game = Repo.get(Game, id)
+    coord = {String.to_integer(y), String.to_integer(x)}
 
     if game do
-      {status, _game} = Game.play!(game, {String.to_integer(y), String.to_integer(x)})
+      conn = case Igo.play!(game, coord) do
+        {:error, message} ->
+          conn
+          |> put_flash(:error, message)
+
+        _ -> conn
+      end
 
       conn
-      |> put_flash(:notice, status)
       |> redirect(to: "/games/#{game.id}")
       |> halt()
     else
