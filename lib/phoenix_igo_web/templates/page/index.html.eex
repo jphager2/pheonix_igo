@@ -7,12 +7,18 @@
   <div class="col-lg-12">
     <table class="table table-striped">
       <tbody>
-        <%= for {black, white, date, result, _url} <- @gokifu_games do %>
+        <%= for {black, white, date, result, url} <- @gokifu_games do %>
           <tr>
             <td><%= black %>(B)</td>
             <td><%= white %>(W)</td>
             <td><%= result %></td>
             <td><%= date %></td>
+            <td>
+              <%= form_for @conn, "/gokifu", [as: :game], fn(f) -> %>
+                <%= hidden_input f, :url, value: url %>
+                <%= submit "Review" %>
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </tbody>

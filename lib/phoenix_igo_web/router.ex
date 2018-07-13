@@ -22,6 +22,8 @@ defmodule PhoenixIgoWeb.Router do
 
     get "/games/:id", GameController, :show
     post "/games/:id/play", GameController, :play
+
+    post "/gokifu", GoKifuController, :create
   end
 
   # Other scopes may use custom stacks.

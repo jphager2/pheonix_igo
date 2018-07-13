@@ -1,7 +1,7 @@
-alias PhoenixIgo.{Repo, Game, Igo}
-
 defmodule PhoenixIgoWeb.GameController do
   use PhoenixIgoWeb, :controller
+
+  alias PhoenixIgo.{Repo, Game, Igo}
 
   def show(conn, %{"id" => id}) do
     game = Repo.get(Game, id)

@@ -19,7 +19,7 @@
             <li><a href="https://github.com/jphager2/phoenix_igo">Source Code</a></li>
           </ul>
         </nav>
-        <h1>PhoenixIgo</h1>
+        <h1><a href="/">PhoenixIgo</a></h1>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
