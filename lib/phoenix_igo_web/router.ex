@@ -22,6 +22,7 @@ defmodule PhoenixIgoWeb.Router do
 
     get "/games/:id", GameController, :show
     post "/games/:id/play", GameController, :play
+    get "/games/:id/review", GameController, :review
 
     post "/gokifu", GoKifuController, :create
   end

@@ -36,5 +36,40 @@ defmodule PhoenixIgoWeb.GameController do
       conn |> redirect(to: "/") |> halt()
     end
   end
+
+  def review(conn, params) do
+    game = Repo.get(Game, params["id"])
+
+    move = try do
+      String.to_integer(params["move"])
+    rescue
+      _ -> 0
+    end
+
+    if game do
+      igame = Game.to_igo(game)
+
+      move = cond do
+        move < 0 ->
+          0
+
+        move > length(igame.moves) - 1 ->
+          length(igame.moves) - 1
+
+        true ->
+          move
+      end
+
+      igame = Map.put(igame, :board, Enum.at(igame.moves, move).board)
+
+      conn
+      |> assign(:move, move)
+      |> assign(:meta, game)
+      |> assign(:game, igame)
+      |> render("review.html")
+    else
+      conn |> redirect(to: "/") |> halt()
+    end
+  end
 end
 
