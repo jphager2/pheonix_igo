@@ -26,8 +26,29 @@
     <p><%= @meta.result %></p>
   </div>
   <div class="review">
-    <input type="range" min="0" max="<%= length(@game.moves) %>" value="<%= @move %>">
-    <a class="btn btn-default" href="/games/<%= @meta.id %>/review?move=<%= @move - 1 %>" data-click-key="37">Previous</a>
-    <a class="btn btn-default" href="/games/<%= @meta.id %>/review?move=<%= @move + 1 %>" data-click-key="39">Next</a>
+    <a
+      class="btn btn-default"
+      data-click-key="37"
+      href="/games/<%= @meta.id %>/review?move=<%= @move - 1 %>"
+      title="<%= gettext("games.review.previous") %>"
+      >
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <input
+      class="moves"
+      max="<%= length(@game.moves) - 1 %>"
+      min="0"
+      type="range"
+      value="<%= @move %>"
+      />
+    <a
+      class="btn btn-default"
+      data-click-key="39"
+      href="/games/<%= @meta.id %>/review?move=<%= @move + 1 %>"
+      title="<%= gettext("games.review.next") %>"
+      >
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    <input class="current-move form-control" value="<%= @move %>" type="text" disabled="disabled"/>
   </div>
 </div>

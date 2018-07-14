@@ -4,10 +4,14 @@ defmodule PhoenixIgoWeb.PageController do
   use PhoenixIgoWeb, :controller
 
   def index(conn, _params) do
-    games = GoKifu.get_games()
+    gokifu = try do
+      GoKifu.get_games()
+    rescue
+      _ -> []
+    end
 
     conn
-    |> assign(:gokifu_games, games)
+    |> assign(:gokifu_games, gokifu)
     |> render("index.html")
   end
 end
