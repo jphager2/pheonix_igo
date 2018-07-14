@@ -1,26 +1,33 @@
-<div class="review">
-  <div class="row">
-    <div class="col-sm-6">
-      <a class="btn btn-default" href="/games/<%= @meta.id %>/review?move=<%= @move - 1 %>">Previous</a>
-    </div>
-    <div class="col-sm-6 text-right">
-      <a class="btn btn-default" href="/games/<%= @meta.id %>/review?move=<%= @move + 1 %>">Next</a>
-    </div>
+<div class="col-sm-3">
+</div>
+<div class="col-sm-6">
+  <div class="board" data-size="<%= board_size(@game) %>" data-turn="<%= game_turn(@game) %>">
+    <%= for {row, i} <- Enum.with_index(board_rows(@game)) do %>
+      <div class="board-row" data-row="<%= i %>">
+        <%= for {col, j} <- Enum.with_index(row) do %>
+          <div class="board-col" data-col="<%= j %>">
+            <%= if star?(@game, i, j) do %>
+              <div class="star"></div>
+            <% end %>
+            <div class="<%= stone_color_class(col) %>"></div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
-<br>
-<div class="board" data-size="<%= board_size(@game) %>" data-turn="<%= game_turn(@game) %>">
-  <%= for {row, i} <- Enum.with_index(board_rows(@game)) do %>
-    <div class="board-row" data-row="<%= i %>">
-      <%= for {col, j} <- Enum.with_index(row) do %>
-        <div class="board-col" data-col="<%= j %>">
-          <%= if star?(@game, i, j) do %>
-            <div class="star"></div>
-          <% end %>
-          <div class="<%= stone_color_class(col) %>"></div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+<div class="col-sm-3">
+  <div class="game-info">
+    <h4>
+      <span class="small black stone"></span>
+      <%= game_title(@game) %>
+      <span class="small white stone"></span>
+    </h4>
+    <p><%= @meta.result %></p>
+  </div>
+  <div class="review">
+    <input type="range" min="0" max="<%= length(@game.moves) %>" value="<%= @move %>">
+    <a class="btn btn-default" href="/games/<%= @meta.id %>/review?move=<%= @move - 1 %>" data-click-key="37">Previous</a>
+    <a class="btn btn-default" href="/games/<%= @meta.id %>/review?move=<%= @move + 1 %>" data-click-key="39">Next</a>
+  </div>
 </div>
-

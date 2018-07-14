@@ -1,7 +1,11 @@
-.board {
-  --base-width: 50px;
+body {
   --color-white: #f5f5f5;
   --color-black: #353535;
+  --base-width: 50px;
+}
+
+.board {
+  --base-width: 50px;
 }
 
 .board[data-turn="white"] {
@@ -94,10 +98,21 @@
   opacity: 0.3;
 }
 
-.board > .board-row > .board-col .stone.white {
+.stone.white {
   background-color: var(--color-white);
 }
 
-.board > .board-row > .board-col .stone.black {
+.stone.black {
   background-color: var(--color-black);
 }
+
+.stone.small {
+  vertical-align: middle;
+  display: inline-block;
+  height: calc(var(--base-width) * 0.25);
+  width: calc(var(--base-width) * 0.25);
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+

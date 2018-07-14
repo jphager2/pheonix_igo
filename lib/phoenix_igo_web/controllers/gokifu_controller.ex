@@ -15,7 +15,7 @@ defmodule PhoenixIgoWeb.GoKifuController do
 
     case Repo.insert(%Game{data: Game.serialize_data(igame), result: reader.result}) do
       {:ok, game} ->
-        conn |> redirect(to: "/games/#{game.id}") |> halt()
+        conn |> redirect(to: "/games/#{game.id}/review") |> halt()
 
       _ ->
         conn

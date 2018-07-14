@@ -3,6 +3,8 @@ defmodule PhoenixIgoWeb.GameController do
 
   alias PhoenixIgo.{Repo, Game, Igo}
 
+  plug :put_layout, "game.html"
+
   def show(conn, %{"id" => id}) do
     game = Repo.get(Game, id)
 

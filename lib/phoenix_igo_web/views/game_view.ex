@@ -3,6 +3,10 @@ alias Igo.{Game, Board}
 defmodule PhoenixIgoWeb.GameView do
   use PhoenixIgoWeb, :view
 
+  def game_title(game) do
+    "#{game.black.name} vs. #{game.white.name}"
+  end
+
   def game_turn(game) do
     Igo.Game.turn(game)
   end
